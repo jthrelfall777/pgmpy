@@ -392,10 +392,6 @@ class BayesianModel(DAG):
                     raise ValueError(
                         f"CPD associated with {node} doesn't have proper parents associated with it."
                     )
-                if not cpd.is_valid_cpd():
-                    raise ValueError(
-                        f"Sum or integral of conditional probabilites for node {node} is not equal to 1."
-                    )
         return True
 
     def to_markov_model(self):
